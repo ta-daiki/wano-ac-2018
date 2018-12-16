@@ -11,6 +11,7 @@ class DelayEffector extends React.Component {
       audioCtx: null,
       audioData: null,
       samplerNode: null,
+      delayNode: null,
       effectBypass: false,
       delayTimeMsec: 100,
       feedbackGain: 0.3,
@@ -33,7 +34,7 @@ class DelayEffector extends React.Component {
     this._loadAudioFile(audioCtx, './SampleLoop.wav');
     this._setUpRooting(audioCtx);
     this.setState({
-      audioCtx: new AudioContext()
+      audioCtx: audioCtx
     });
   }
 
